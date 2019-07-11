@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UgV-Rn-NQE">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="POe-td-MDg">
+            <objects>
+                <navigationController id="UgV-Rn-NQE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zFe-PI-Y99">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ym9-63-9g3" kind="relationship" relationship="rootViewController" id="85o-qK-vn4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qmh-7s-chw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Person View Controller-->
+        <scene sceneID="UwD-sf-O0S">
+            <objects>
+                <viewController storyboardIdentifier="PersonViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ym9-63-9g3" customClass="PersonViewController" customModule="CoreData_Traning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gom-16-G4k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oFw-WP-qHz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oFw-WP-qHz" firstAttribute="top" secondItem="ppf-kR-Rij" secondAttribute="top" id="6bO-IM-cc7"/>
+                            <constraint firstItem="oFw-WP-qHz" firstAttribute="leading" secondItem="ppf-kR-Rij" secondAttribute="leading" id="PXl-dc-vIs"/>
+                            <constraint firstItem="ppf-kR-Rij" firstAttribute="bottom" secondItem="oFw-WP-qHz" secondAttribute="bottom" id="Wx7-wE-UMC"/>
+                            <constraint firstItem="ppf-kR-Rij" firstAttribute="trailing" secondItem="oFw-WP-qHz" secondAttribute="trailing" id="prj-tm-9BH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ppf-kR-Rij"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Ip-d8-aVh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="72h-pa-bkR">
+                            <connections>
+                                <action selector="addPersonButtonAction:" destination="Ym9-63-9g3" id="Fic-3v-uzW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="personTableView" destination="oFw-WP-qHz" id="DIk-ov-bpF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gVC-QT-Vr0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="907" y="759"/>
+        </scene>
+    </scenes>
+</document>
